@@ -1,3 +1,4 @@
+
 class Control:
     def __init__(self, view):
         self.view = view
@@ -11,4 +12,7 @@ class Control:
         self.view.btn2.clicked.connect(self.view.clearMessage)
         
     def sum(self, a, b):
-        return a+b
+        try:
+            return a+b
+        except:
+            return "Calculation Error"
